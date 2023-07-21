@@ -1,0 +1,323 @@
+:root {
+	--red: #ff3838;
+	--white: #ffffff;
+	--black: #000000;
+  }
+
+
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+	font-family: 'codropsicons';
+	src: url('../fonts/codropsicons/codropsicons.eot');
+	src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	font-size: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+
+
+a:hover,
+a:active {
+	color: #333;
+}
+
+/* Header Style */
+.container>header {
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.01);
+}
+
+.container>header h1 {
+	font-size: 2.625em;
+	line-height: 1.3;
+	margin: 0;
+	font-weight: 300;
+}
+
+/* To Navigation Style */
+.codrops-top {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.6);
+	text-transform: uppercase;
+	width: 100%;
+	font-size: 0.69em;
+	line-height: 2.2;
+}
+
+.codrops-top a {
+	padding: 0 1em;
+	letter-spacing: 0.1em;
+	color: #888;
+	display: inline-block;
+}
+
+.codrops-top a:hover {
+	background: rgba(255, 255, 255, 0.95);
+	color: #333;
+}
+
+.codrops-top span.right {
+	float: right;
+}
+
+.codrops-top span.right a {
+	float: left;
+	display: block;
+}
+
+.codrops-icon:before {
+	font-family: 'codropsicons';
+	margin: 0 4px;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.codrops-icon-drop:before {
+	content: "\e001";
+}
+
+.codrops-icon-prev:before {
+	content: "\e004";
+}
+
+.codrops-icon-archive:before {
+	content: "\e002";
+}
+
+.codrops-icon-next:before {
+	content: "\e000";
+}
+
+.codrops-icon-about:before {
+	content: "\e003";
+}
+
+/* Demo Buttons Style */
+.codrops-demos {
+	padding-top: 1em;
+	font-size: 0.9em;
+}
+
+.codrops-demos a {
+	display: inline-block;
+	margin: 0.5em;
+	padding: 0.7em 1.1em;
+	border: 3px solid #dbe6da;
+	color: blue;
+	font-weight: 700;
+}
+
+.codrops-demos a:hover,
+.codrops-demos a.current-demo,
+.codrops-demos a.current-demo:hover {
+	border-color: #2c3f52;
+	color: #2c3f52;
+}
+
+@media screen and (max-width: 25em) {
+
+	.codrops-icon span {
+		display: none;
+	}
+
+}
+
+ 
+  /* Background Gradient Animation */
+  body {
+	background: linear-gradient(135deg, #0e0350, #520606, #4a5107);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	margin: 0;
+	padding: 0;
+  }
+  
+  @keyframes gradient {
+	0% {
+	  background-position: 0% 50%;
+	}
+	50% {
+	  background-position: 100% 50%;
+	}
+	100% {
+	  background-position: 0% 50%;
+	}
+  }
+  
+  .caption h2 {
+	color: var(--white);
+	margin-bottom: 50px;
+	text-transform: uppercase;
+	font-size: 70px;
+	position: relative; /* Añadimos posición relativa para poder posicionar el círculo */
+	display: inline-block; /* Aseguramos que el círculo ocupe solo el espacio necesario */
+  }
+
+  .caption h2::before {
+	content: "\f06a"; /* Código del icono de FontAwesome para el círculo (fa-exclamation-circle) */
+	font-family: "FontAwesome";
+	font-size: 40px;
+	color: var(--red);
+	position: absolute;
+	top: -10px; /* Ajusta la posición verticalmente */
+	left: -35px; /* Ajusta la posición horizontalmente */
+	border-radius: 50%;
+	background-color: var(--white);
+	padding: 10px;
+  }
+   
+  @keyframes fade {
+	from {
+	  opacity: .4
+	} 
+	to {
+	  opacity: 1
+	}
+  }
+  
+  @-webkit-keyframes fade {
+	from {
+	  opacity: .4
+	} 
+	to {
+	  opacity: 1
+	}
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media screen and (max-width: 600px) {
+	.navbar {
+	  padding: 10px;
+	}
+	
+	.navbar .menu {
+	  display: none;
+	}
+  
+	.navbar .icon {
+	  display: block;
+	  position: absolute;
+	  top: 13px;
+	  right: 13px;
+	}
+  
+	.navbar.show {
+	  background: var(--black);
+	}
+  
+	.navbar.show .menu {
+	  display: block;
+	  width: 100%;
+	}
+  
+	.navbar.show .menu a {
+	  width: 100%;
+	}
+  
+  }
+  .caption button {
+	background-color: var(--white);
+	border: 2px solid var(--red);
+	color: var(--red);
+	padding: 10px 40px;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-radius: 16px;
+	margin-top: 30px;
+	transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  .caption button:hover {
+	cursor: pointer;
+	color: var(--white);
+	background-color: var(--red);
+  }
+  
+  .caption button:focus {
+	outline: none;
+  }
+  
+  .dot {
+	cursor: pointer;
+	height: 10px;
+	width: 10px;
+	margin: 0 2px;
+	background-color: var(--white);
+	border-radius: 5px;
+	display: inline-block;
+	transition: background-color 0.6s ease, height 0.6s;
+  }
+  
+  .slide-control {
+	position: absolute;
+	left: 30px;
+	top: 50%;
+	width: 10px;
+	text-align: center;
+  }
+  
+  .dot:hover {
+	background-color: var(--red);
+  }
+  
+  .dot.active {
+	background-color: var(--red);
+	height: 60px;
+  }
+  
+  /* Fade Animation */
+  .fade {
+	animation-name: fade;
+	animation-duration: 1.0s;
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.0s;
+  }
+  .navbar a {
+	float: left;
+	color: var(--white);
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 25px;
+	padding: 12px;
+  }
