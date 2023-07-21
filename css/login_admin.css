@@ -126,7 +126,7 @@ form h2{
   position: absolute;
   left: 10px;
   top: 50%;
-  transform: translateY(-150%);
+  transform: translateY(-50%);
   color: #2b817b;
   font-size: 18px;
   transition: .3s;
