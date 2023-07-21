@@ -57,7 +57,7 @@ if (isset($_SESSION['user_id'])) {
             </a>
 
             <a href="#"> Estadisticas </a>
-            <a href="../include/logout.php"> Cerrar sesion </a>
+            <a href="../includes/logout.php"> Cerrar sesion </a>
             <a href="#"> contact programmers </a>
         </div>
     </div>
