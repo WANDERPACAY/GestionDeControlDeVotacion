@@ -222,7 +222,7 @@
   
   /* Background Gradient Animation */
   body {
-	background: linear-gradient(135deg, #0e0350, #520606, #4a5107);
+	background: linear-gradient(135deg, #150570, #780606, #7e8b0b);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	margin: 0;

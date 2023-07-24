@@ -17,11 +17,7 @@ if (isset($_SESSION['user_id'])) {
           if its done, load the user data.*/
 
 } else {
-    echo "<h1>NO SIRVE ASI, DEBES REGISTRARTE xD</h1>";
-    die("UPS ':D </3 ");
-    /*Si nó, error.
-          ==============
-          if NOT, ERROR*/
+    header("Location: ../index.php");
 }
 ?>
 <!DOCTYPE html>
@@ -56,7 +52,7 @@ if (isset($_SESSION['user_id'])) {
             <a href="votarM.php" class=" active">Votar</a>
             </a>
 
-            <a href="#"> Estadisticas </a>
+            <a href="grafics.php"> Estadisticas </a>
             <a href="../includes/logout.php"> Cerrar sesion </a>
             <a href="#"> contact programmers </a>
         </div>

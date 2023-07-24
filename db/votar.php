@@ -17,13 +17,13 @@ if (isset($_GET['tipo']) && isset($_GET['voto']) && isset($_GET['votante'])) {
 
     // Verificar si ya existe un voto para el mismo tipo y votante
     if ($result_verificar_voto->num_rows > 0) {
-        echo "El votante ya ha votado por este tipo de voto anteriormente.";
+        header("Location: ../pages/confi.php");
     } else {
         // Consulta SQL para insertar los datos en la tabla votos
         $sql_insertar = "INSERT INTO votos (tipo, voto, votante, accion) VALUES ('$tipo', '$voto', '$votante', '$accion')";
 
         if ($conn->query($sql_insertar) === TRUE) {
-            echo "Voto realizado exitosamente.";
+            header("Location: ../pages/confi.php");
         } else {
             echo "Error al insertar datos de voto: " . $conn->error;
         }
