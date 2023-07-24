@@ -1,0 +1,49 @@
+
+    body {
+  margin: 0;
+  padding: 0;
+}
+
+.square {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 200px auto;
+  
+  border-radius: 20px;
+  overflow: hidden;
+  
+}
+
+.square form {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.square h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.square img {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  height: auto;
+}
+
+.background-image {
+  position: absolute;
+  top: 20;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-image: url('img.png'); /* Ruta de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px); /* Puedes ajustar el desenfoque aquí */
+  z-index: -1;
+}
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/style.css">
+	<title>Iniciar Sesion</title>
+</head>
+<body>
+	<div class="square">
+		<i style="--clr:#00ff0a;"></i>
+		<i style="--clr:#ff0057;"></i>
+		<i style="--clr:#fffd44;"></i>
+		<form class="login" action="" method="get">
+			<h2>Informacion </h2>
+			<img src="../img/a.png" alt="">
+			
+		</form>
+	</div>
+</body>
+<style>
+    body {
+  margin: 0;
+  padding: 0;
+}
+
+.square {
+  position: relative;
+  width: 900px;
+  height: 900px;
+  margin:  auto;
+  
+  border-radius: 20px;
+  overflow: hidden;
+  
+}
+
+.square form {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.square h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.square img {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  height: auto;
+}
+
+.background-image {
+  position: absolute;
+  top: 60;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-image: url('img.png'); /* Ruta de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+
+  z-index: -1;
+}
+
+</style>
+</html>
